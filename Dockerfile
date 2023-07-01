@@ -12,7 +12,7 @@ RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u 1002 admin
 RUN echo 'admin:admin' | chpasswd
 
 # Install packages
-RUN apt-get update && apt-get install -y openssh-server iproute2 iputils-ping vim wget
+RUN apt-get update && apt-get install -y openssh-server iproute2 iputils-ping vim wget freeradius
 
 # Config SSH
 RUN echo "HostKeyAlgorithms ssh-dss,ecdsa-sha2-nistp256,ssh-ed25519" >> /etc/ssh/ssh_config    
