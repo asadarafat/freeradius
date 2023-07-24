@@ -20,12 +20,8 @@ RUN echo "HostKeyAlgorithms ssh-dss,ecdsa-sha2-nistp256,ssh-ed25519" >> /etc/ssh
 RUN echo "KexAlgorithms diffie-hellman-group1-sha1,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha1" >> /etc/ssh/ssh_config    
 RUN service ssh restart
 
-# Get and install BngBlaster
-# RUN wget -O /tmp/bngblaster-0.8.22-ubuntu-22.04_amd64.deb https://github.com/rtbrick/bngblaster/releases/download/0.8.22/bngblaster-0.8.22-ubuntu-22.04_amd64.deb
-# RUN apt-get install -y /tmp/bngblaster-0.8.22-ubuntu-22.04_amd64.deb
 
-# Copy bngblaster config file example folder
-# COPY ./examples /opt/bngblaster/
+
 
 #expose port 
 EXPOSE 8080 22
